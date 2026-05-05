@@ -1,0 +1,129 @@
+{
+  "project_context": {
+    "domain": "Academic Capstone / Data Records Platform",
+    "theme": "Light",
+    "archetype": "Archetype 4 (Swiss & High-Contrast)",
+    "aesthetic": "Brutalist Academic, Archival Swiss, Technical Data Terminal",
+    "core_emotion": "Credible, structured, authoritative, functional"
+  },
+  "typography": {
+    "strategy": "Swiss Brutalist (Tech/Art). Radical weight contrast. No 'Inter' or generic sans for headings.",
+    "fonts": {
+      "headings": {
+        "family": "Cabinet Grotesk",
+        "weights": ["300", "800", "900"],
+        "usage": "H1-H4. Must use tracking-tight or tracking-tighter for sizes > 32px. No center alignment unless specifically tension-driven."
+      },
+      "body": {
+        "family": "IBM Plex Sans",
+        "weights": ["400", "500"],
+        "usage": "All paragraph text, labels, and minor UI elements. Keep leading-relaxed."
+      },
+      "mono": {
+        "family": "IBM Plex Mono",
+        "usage": "Data points, stats, table headers, code blocks."
+      }
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "h4": "text-lg sm:text-xl",
+      "body": "text-base",
+      "small": "text-sm",
+      "overline": "uppercase text-xs tracking-[0.2em] font-mono"
+    }
+  },
+  "color_palette": {
+    "rules": "Color is function only. 95% of UI is monochrome. Colors exist only to guide action.",
+    "base": {
+      "primary_bg": "#ffffff",
+      "secondary_bg": "#f4f4f5",
+      "border": "#e4e4e7"
+    },
+    "text": {
+      "primary": "#09090b",
+      "secondary": "#52525b",
+      "inverse": "#ffffff"
+    },
+    "accents": {
+      "brand_action": "#002FA7",
+      "warning_alert": "#FF2400",
+      "success_data": "#059669"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "p-1, p-2, p-4, p-6, p-8, p-12, p-16, p-24, p-32",
+    "philosophy": "Generous spacing for marketing, dense/compact for dashboard.",
+    "grid_patterns": {
+      "marketing": "Mode A: The Tetris Grid. Asymmetric. grid-cols-1 md:grid-cols-12. Mix large spans (col-span-8) with narrow (col-span-4). Empty cells for offset.",
+      "dashboard": "Mode B: The Control Room Grid. Dense. grid-cols-1 lg:grid-cols-4. 1px borders between cells."
+    },
+    "surfaces": {
+      "marketing_cards": "Flat background. 1px solid border (#e4e4e7). Sharp corners (rounded-none).",
+      "dashboard_widgets": "The Grid Borders Look (Technical). border-collapse style. border-r border-b. No drop shadows. Sharp, clinical, accessible."
+    }
+  },
+  "components_strategy": {
+    "forms_and_inputs": "Shadcn UI, highly customized. Remove rounded corners (rounded-none). Use 1px sharp borders. Active state: ring-0 border-[#002FA7].",
+    "buttons": "Flat, solid colors. No gradients. Hover state must invert colors or darken significantly. Use data-testid on all buttons.",
+    "tables": "Shadcn Table. Flat header row, monospaced column titles, dense spacing for data.",
+    "charts": "Shadcn Chart components (Recharts). Monochrome styling with a single accent color (#002FA7).",
+    "navigation": "Sticky nav. Solid background with a hard bottom border. Logo + 3-5 links + CTA. Links must be visible on desktop, no hamburger.",
+    "calculator": "Pure utility layout. 2-column grid. Left side: input fields (Shadcn forms), Right side: Massive typography output for the result.",
+    "icons": "Phosphor Icons (@phosphor-icons/react). Sharp, technical lines."
+  },
+  "page_guidelines": {
+    "home": {
+      "type": "marketing",
+      "layout": "Asymmetrical hero with overlapping text and image. H1 should break the grid. Use Tetris Grid for secondary sections."
+    },
+    "about": {
+      "type": "marketing/editorial",
+      "layout": "Heavy text focus. 2-column split (Left: sticky sticky H2, Right: long scrolling text block). Use generous p-16 padding."
+    },
+    "features": {
+      "type": "marketing",
+      "layout": "Technical grid. 3-column bento box with 1px borders dividing all features. No outer wrapper border. Monospaced numbering for each feature."
+    },
+    "data_dashboard": {
+      "type": "dashboard",
+      "layout": "Strict 4-column Control Room grid. Top row: 4 KPI metric widgets (monospaced numbers). Left column: CRUD Submission Form. Right 3 columns: Interactive Data Table (Read). F-pattern hierarchy."
+    },
+    "login": {
+      "type": "app",
+      "layout": "Split screen. Left 50% Stark white with sharp auth form (center aligned vertically/horizontally in its column). Right 50% architectural image."
+    },
+    "contact": {
+      "type": "marketing",
+      "layout": "Minimalist layout. Large typography 'Let's Talk'. Functional 1px border form on the right side."
+    }
+  },
+  "motion_and_interactions": {
+    "hover": "Explicit text and bg color change. No floating or scaling. Keep it grounded. e.g., hover:bg-[#002FA7] hover:text-white.",
+    "transitions": "Fast, mechanical. transition: background-color 0.15s ease-out, color 0.15s ease-out.",
+    "focus": "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#002FA7]."
+  },
+  "media_and_images": {
+    "rules": "Images must have contrast overlays (max bg-black/50) if text is on top. Do not use generic overlays, prefer gradient-to-r if text is left-aligned.",
+    "urls": {
+      "hero_architecture": {
+        "url": "https://images.unsplash.com/photo-1684403798139-289e0f7fa5da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHx1bml2ZXJzaXR5JTIwbGlicmFyeSUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3Nzc5NjIxNjZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Geometric building interior, use for About or Home feature section"
+      },
+      "data_center": {
+        "url": "https://images.pexels.com/photos/5480781/pexels-photo-5480781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Data center network servers, use for Features or Login screen split"
+      },
+      "library_elegant": {
+        "url": "https://images.pexels.com/photos/33750807/pexels-photo-33750807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Classic library architecture, use as Hero background or Contact page visual"
+      }
+    }
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure minimum 4.5:1 for standard text. All grey text must be at least zinc-500 on white.",
+    "testing": "All interactive elements, buttons, inputs, tables MUST have data-testid attributes (e.g., data-testid='submit-data-button')."
+  },
+  "instructions_to_main_agent": "Implement pure HTML/Tailwind for structural components and layouts. Strip rounded corners from Shadcn components. Avoid pure center-aligned marketing pages; rely on the asymmetric tetris grid. Use raw 1px borders (border-zinc-200) extensively for structure. Install and use @phosphor-icons/react."
+}
